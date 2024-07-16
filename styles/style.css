@@ -1,0 +1,160 @@
+/* 
+selector generico - RESET CSS a todos los elementos
+
+
+--------- box-sizing: DEFINIR CÓMO SE DEFINE EL TOTAL DE LA ALTURA Y ANCHO 
+
+Tener en cuenta que el tamaño verdadero de los elementos esta compuesto por:
+ancho: width + padding (a izq y dcha, x2) + boder (a izq y dcha, x2)
+alto: height + padding  (arriba y abajo, x2) + boder (arriba y abajo, x2)
+
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+    --color-primario: #27005D;
+    --color-secundario: #9400ff;
+    --color-terciario: #aed2ff;
+    --color-hover: #272727;
+    --fuente-montserrat: "Montserrat", sans serif;
+    --fuente-krona: "Krona One", sans serif;
+}
+
+*{
+    padding: 0;
+    margin: 0 auto;
+}
+
+
+body{
+    background-color: var(--color-primario);
+    color: var(--color-secundario);
+    /*
+    100vh la altura que ocupa el body es el 100% de la altura del viewport
+    */
+    box-sizing: border-box;
+}
+
+.header{
+    padding: 2% 0% 0% 15%;
+
+}
+
+.nav_header{
+    display: flex;
+    gap: 80px;
+}
+
+.nav_header_links{
+    font-family: var(--fuente-montserrat);
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--color-terciario);
+    text-decoration: none;
+}
+
+
+.intro{
+    padding: 5% 15%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.intro_contenido{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.presentacion_contenido_titulo{
+    font-size: 2.25rem;
+    font-family: var(--fuente-krona);
+}
+
+
+.titulo-destaque{
+    color: var(--color-terciario);
+}
+
+.presentacion_contenido_texto{
+    font-size: 1.5rem;
+    font-family: var(--fuente-montserrat);
+}
+
+
+
+.presentacion_enlaces{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+}
+
+.presentacion_enlaces_link{
+    width: 50%;
+    text-align: center;
+    padding: 21.5px 0;
+    border-radius: 8px;
+    font-family: var(--fuente-montserrat);
+    font-size:  1rem;
+    font-weight: 600;
+    color: var(--color-secundario);
+    text-decoration: none;
+    margin: 8px;
+    border: 2px solid var(--color-terciario);  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.presentacion_enlaces_link:hover{
+    background-color: var(--color-hover);
+}
+
+.presentacion_img{
+    width: 50%;
+}
+
+
+.presentacion_enlaces_subtitulos{
+    font-family: var(--fuente-krona);
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.intro img:hover{
+    filter: drop-shadow(1px 1px 20px var(--color-terciario));
+}
+
+.footer{
+    background-color: var(--color-terciario);
+    padding: 24px;
+    color: var(--color-primario);
+    text-align: center;
+    font-family: var(--fuente-montserrat);    
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+@media (max-width: 1200px){
+    .header{
+        padding: 10%;
+    }
+    .nav_header{
+        justify-content: center;
+    }
+    .intro{
+        flex-direction: column-reverse;
+        padding: 5%;
+    }
+    .intro_contenido{
+        width: auto; 
+        /* 
+ auto es para que automáticamente el ancho se adapte al tamaño del elemento padre (main clase: intro)
+
+*/
+    }
+}

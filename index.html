@@ -5,11 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portafolio</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./styles/style.css">
 
 </head>
 <body>
-    <header></header>
+    <header class="header">
+        <nav class="nav_header">
+            <a class="nav_header_links" href="index.html">Home</a>
+            <a class="nav_header_links" href="about.html">Sobre mí</a>
+        </nav>
+    </header>
     <main class="intro">
         <section class="intro_contenido">
         <h1 class="presentacion_contenido_titulo">
@@ -22,12 +27,22 @@
                   ¿Hablamos?
                 </p>
             <div class="presentacion_enlaces">
-            <a class="presentacion_enlaces_link" href="https://instagram.com/">Instagram</a>
-            <a class="presentacion_enlaces_link" href="https://github.com/">GitHub</a>
+                <h2 class="presentacion_enlaces_subtitulos">Accede a mis redes</h2>
+            <a class="presentacion_enlaces_link" href="https://instagram.com/">
+                <img src="./imgs/instagram.png" alt="icono instagram">
+                Instagram</a>
+            <a class="presentacion_enlaces_link" href="https://github.com/">
+                <img src="./imgs/github.png" alt="icono github">
+                GitHub</a>
+            <a class="presentacion_enlaces_link" href="https://www.twitch.tv/">
+                <img src="./imgs/twitch.png" alt="icono Twitch">
+                 Twitch</a>
             </div>
         </section>
-            <img src="Imagem.png" alt="Foto de Ana García desarrolando un proyecto">
+            <img class="presentacion_img" src="Imagem.png" alt="Foto de Ana García desarrollando un proyecto">
     </main>
-    <footer></footer>
+    <footer class="footer">
+        <p>Desarrollado por Marisol Pascua</p>
+    </footer>
 </body>
 </html>
